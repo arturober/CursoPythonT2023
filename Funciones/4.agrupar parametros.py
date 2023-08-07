@@ -1,3 +1,4 @@
+# *aficiones se transforma en tupla con todos los valores recogidos
 def info_persona(nombre, *aficiones):
     print(f"Nombre: {nombre}. Aficiones: {aficiones}")
     
