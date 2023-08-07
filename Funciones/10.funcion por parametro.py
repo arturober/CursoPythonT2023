@@ -23,3 +23,12 @@ print(palabras) # ['acera', 'casa', 'mesa', 'pelota', 'zoobarbacoa']
 palabras.sort(key = lambda p: len(p)) # Ordenar palabras por su longitud
 print(palabras)
 
+personas = [
+    {"nombre": "Juan", "edad": 24},
+    {"nombre": "Ana", "edad": 54},
+    {"nombre": "Antonio", "edad": 17}
+]
+personas.sort(key = lambda p: p['edad'] )
+print(personas)
+personas.sort(key = lambda p: p['nombre'] )
+print(personas)
