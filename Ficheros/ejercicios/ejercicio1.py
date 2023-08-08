@@ -13,3 +13,7 @@ with open("Ficheros/archivos/numeros.txt") as f:
         total += int(linea)
         
     print(f"La suma es: {total}")
+
+cadena = "3;2;5;6"
+lista = cadena.split(";")
+print(lista) # ['3', '2', '5', '6']
