@@ -41,3 +41,16 @@ print(longitudes)
 longitudes2 = [len(p) for p in palabras if p.startswith("c")]
 
 print(longitudes2)
+
+# Tenemos una lista de diccionarios. Cada diccionario contiene los datos de una persona (nombre y edad). Crea 4 personas
+# Genera una lista con los nombres de las personas que tengan menos de 18 años
+
+personas = [
+    {"nombre": "Juan", "edad": 24},
+    {"nombre": "Ana", "edad": 54},
+    {"nombre": "Antonio", "edad": 17},
+    {"nombre": "María", "edad": 9}
+]
+
+nombres_menores = [p['nombre'] for p in personas if p['edad'] < 18]
+print(nombres_menores)
