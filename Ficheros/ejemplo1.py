@@ -25,3 +25,5 @@ print("\nDevolver el contenido de un archivo como una lista de líneas:")
 with open("Ficheros/archivos/a.txt") as f:
     lineas = [linea.strip() for linea in f.readlines()] # Quitamos salto de línea con strip
     print(lineas)
+    
+    
