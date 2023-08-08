@@ -28,6 +28,7 @@ personas = [
     {"nombre": "Ana", "edad": 54},
     {"nombre": "Antonio", "edad": 17}
 ]
+
 personas.sort(key = lambda p: p['edad'] )
 print(personas)
 personas.sort(key = lambda p: p['nombre'] )
