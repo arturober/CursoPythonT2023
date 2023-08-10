@@ -5,7 +5,6 @@ class Cuadrado:
         
     def area(self) -> int:
         return self.lado ** 2
-        
     
 c = Cuadrado(6) # lado = 6
 print(c.lado)
