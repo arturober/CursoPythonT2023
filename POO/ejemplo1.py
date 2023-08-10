@@ -1,3 +1,4 @@
+# En Python todo son objetos
 n = 2
 print(type(n))
 print(n.bit_length()) # <class 'int'>
@@ -10,3 +11,4 @@ def f():
     pass
 
 print(type(f)) # <class 'function'>
+
