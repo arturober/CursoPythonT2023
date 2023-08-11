@@ -10,3 +10,6 @@ a = Ave("Avestruz", 50, False)
 a.comer()
 a.poner_huevos()
 print(a)
+
+class Prueba(object):
+    pass

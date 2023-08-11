@@ -33,3 +33,10 @@ class Programador(Empleado): # Programador es un empleado
     
 programador = Programador("Pepito", 20000, 'Python')
 print(programador)
+
+print(issubclass(Programador, object)) # True (Programador hereda de object)
+print(issubclass(Programador, Empleado)) # True
+print(issubclass(Empleado, Programador)) # False
+print(isinstance(programador, object)) # True (p es un objeto)
+print(isinstance(programador, Empleado)) # True (p es un Empleado)
+print(isinstance(programador, Programador)) # True (p es un Programador)
