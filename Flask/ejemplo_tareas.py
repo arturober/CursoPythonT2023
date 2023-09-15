@@ -37,5 +37,22 @@ def insert_tarea():
     db.session.commit()
     return jsonify(tarea), 201 # 201 (CREATED)
 
+@app.put("/tareas/<int:id>/realizar")
+def realizar_tarea(id: int):
+    tarea = db.session.get(Tarea, id)
+    if not tarea:
+        return { "error" : "Tarea no encontrada" }, 404
+    tarea.realizada = True
+    db.session.commit()
+    return jsonify(tarea)
+
+@app.delete("/tareas/<int:id>")
+def delete_tarea(id: int):
+    tarea = db.session.get(Tarea, id)
+    if not tarea:
+        return { "error" : "Tarea no encontrada" }, 404
+    db.session.delete(tarea)
+    db.session.commit()
+    return "", 204 # No Content(204)
 
 app.run()
