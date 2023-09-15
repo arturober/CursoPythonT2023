@@ -8,6 +8,8 @@ app = Flask(__name__)
 db = SQLAlchemy()
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///productos.sqlite"
+# Para MySQL/MariaDB instalar esto -> pip install PyMySQL (y crear la base de datos en MySQL)
+# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@localhost/productos"
 db.init_app(app)  # Registramos SQLAlchemy en la aplicación
 
 
