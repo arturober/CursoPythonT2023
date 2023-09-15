@@ -37,5 +37,24 @@ def insert_producto():
     db.session.commit()
     return jsonify(producto), 201 # 201 (CREATED)
 
+@app.put("/productos/<int:id>")
+def update_producto(id: int):
+    json = request.json
+    producto = db.session.get(Producto, id)
+    if not producto:
+        return { "error" : "Producto no encontrado" }, 404
+    producto.nombre = json["nombre"]
+    producto.precio = json["precio"]
+    db.session.commit()
+    return jsonify(producto)
+
+@app.delete("/productos/<int:id>")
+def delete_producto(id: int):
+    producto = db.session.get(Producto, id)
+    if not producto:
+        return { "error" : "Producto no encontrado" }, 404
+    db.session.delete(producto)
+    db.session.commit()
+    return "", 204 # No Content(204)
 
 app.run()
