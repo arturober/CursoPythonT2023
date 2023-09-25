@@ -1,0 +1,1 @@
+from routes.producto_routes import productos as productos_blueprint
